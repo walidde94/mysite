@@ -1,1 +1,3 @@
-Tell me who you <area shape="" coords="" href="" alt="">
+<?php 
+echo 'Tell me who you are'
+?>
