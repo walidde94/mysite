@@ -1,0 +1,24 @@
+<template>
+  <div id="app" class="min-h-screen">
+    <router-view />
+  </div>
+</template>
+
+<script setup>
+import { onMounted } from 'vue'
+import { useAuthStore } from '@/stores/auth'
+
+const authStore = useAuthStore()
+
+onMounted(() => {
+  // Initialize auth state from localStorage
+  authStore.checkAuth()
+})
+</script>
+
+<style scoped>
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
